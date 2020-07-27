@@ -317,3 +317,10 @@ monthConversions2 = {
 print(monthConversions2.get(1))
 
 # WHILE LOOP #
+
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+print("Done with loop")
