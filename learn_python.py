@@ -53,13 +53,15 @@ print(phrase.isupper())
 print(phrase.upper().isupper())
 print(len(phrase))
 
-print(phrase[0])  # python index starts from 0
+print(phrase[0])
+# python index starts from 0
 phrase = "Giraffe Academy"
 #         0123456789
 print(phrase[2])
 print(phrase.index("G"))
 print(phrase.index("Acad"))
-print(phrase.index("a"))  # print(phrase.index("z")) will create error
+print(phrase.index("a"))
+# print(phrase.index("z")) will create error
 print(phrase.replace("Giraffe", "Elephant"))
 
 # WORKING WITH NUMBERS #
@@ -88,18 +90,18 @@ print(sqrt(36))
 
 # GETTING INPUT FROM USERS #
 
-# enter_name = input("Enter your name: ")
-# print("Hello " + enter_name + "!")
+enter_name = input("Enter your name: ")
+print("Hello " + enter_name + "!")
 
-# enter_age = input("Enter your age: ")
-# print("Hello " + enter_name + "! You are " + enter_age + "!")
+enter_age = input("Enter your age: ")
+print("Hello " + enter_name + "! You are " + enter_age + "!")
 
 # BUILDING A BASIC CALCULATOR #
 
-# num1 = input("Enter first number: ")
-# num2 = input("Enter second number: ")
-# result = float(num1) + float(num2)
-# print(result)
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+result = float(num1) + float(num2)
+print(result)
 
 # MAD LIBS GAME #
 
@@ -107,13 +109,13 @@ print("Roses are red")
 print("Violets are blue")
 print("I love you")
 
-# enter_color = input("Enter a color: ")
-# enter_plural_noun = input("Enter a plural noun: ")
-# enter_celebrity = input("Enter a celebrity: ")
+enter_color = input("Enter a color: ")
+enter_plural_noun = input("Enter a plural noun: ")
+enter_celebrity = input("Enter a celebrity: ")
 
-# print("Roses are " + enter_color)
-# print(enter_plural_noun + " are blue")
-# print("I love " + enter_celebrity)
+print("Roses are " + enter_color)
+print(enter_plural_noun + " are blue")
+print("I love " + enter_celebrity)
 
 # LISTS #
 
@@ -262,20 +264,20 @@ print(max_num(3,4,5))
 
 # BUILDING A BETTER CALCULATOR #
 
-# num1 = float(input("Enter first number: "))
-# op = input("Enter operator: ")
-# num2 = float(input("Enter second number: "))
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
 
-#if op == "+":
-   # print(num1 + num2)
-#elif op == "-":
-    #print(num1 - num2)
-#elif op == "/":
-    #print(num1 / num2)
-#elif op == "*":
-    #print(num1 * num2)
-#else:
-    #print("Invalid operator")"
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("Invalid operator")"
 
 # DICTIONARIES # key: value
 
@@ -324,3 +326,23 @@ while i <= 10:
     i += 1
 
 print("Done with loop")
+
+# BUILDING A GUESSING GAME #
+
+secret_word = "giraffe"
+guess_word = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess_word != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess_word = input("Enter your guess: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
