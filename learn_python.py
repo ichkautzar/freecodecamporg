@@ -277,7 +277,7 @@ elif op == "/":
 elif op == "*":
     print(num1 * num2)
 else:
-    print("Invalid operator")"
+    print("Invalid operator")
 
 # DICTIONARIES # key: value
 
@@ -346,3 +346,44 @@ if out_of_guesses:
     print("Out of guesses, you lose!")
 else:
     print("You win!")
+
+# FOR LOOPS # 
+
+for letter in "Giraffe Academy":
+    print(letter)
+
+friends = ["Jim", "Karen", "Kevin"]
+for friend in friends:
+    print(friend)
+
+for index in range(10):
+    print(index)
+
+for index in range(3, 10):
+    print(index)
+
+for index in range(len(friends)):
+    print(friends[index])
+
+for index in range(5):
+    if index == 0:
+        print("first iteration")
+    else:
+        print("not first")
+
+# EXPONENT FUNCTION # 
+
+print(2 ** 3)
+
+def raise_to_power(base_number, pow_number):
+    result = 1
+    for index in range(pow_number):
+        result = result * base_number 
+    return result 
+
+print(raise_to_power(3, 2))
+
+print(raise_to_power(3, 4
+
+# 2D LISTS AND NESTED LOOPS # 
+
