@@ -383,7 +383,101 @@ def raise_to_power(base_number, pow_number):
 
 print(raise_to_power(3, 2))
 
-print(raise_to_power(3, 4
+print(raise_to_power(3, 4))
 
 # 2D LISTS AND NESTED LOOPS # 
 
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6], 
+    [7, 8, 9],
+    [0]
+]
+
+print(number_grid[0][0])
+print(number_grid[2][1])
+
+for row in number_grid:
+    print(row)
+
+for row in number_grid:
+    for col in row:
+        print(col)
+
+# BUILDING A TRANSLATOR # 
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return(translation)
+
+print(translate(input("Enter a phrase: ")))
+
+# COMMENTS # 
+
+# This program is cool 
+print("Comments are fun")
+
+'''
+Bla bla bla 
+bla bla bla 
+askdaldalksdaslkdalksd
+asdaeajwiodjawldjawldjas
+'''
+
+# TRY EXCEPT # 
+
+number = int(input("Enter a number: "))
+4
+print(number)
+
+number = int(input("Enter a number: "))
+asd
+
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except:
+    print("Invalid input")
+
+try:
+    value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError:
+    print("Divided by zero")
+except ValueError:
+    print("Invalid input")
+
+try:
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError:
+    print("Divided by zero")
+except ValueError:
+    print("Invalid input")
+
+try:
+    answer = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:
+    print(err)
+except ValueError:
+    print("Invalid input")
+
+# READING FILES # 
+
+open("employees.txt", "r") # read 
+open("employees.txt", "w") # write 
+open("employees.txt", "a") # append 
+open("employees.txt", "r+") # read and writing 
+
+employee_file = open("employees.txt", "r")
